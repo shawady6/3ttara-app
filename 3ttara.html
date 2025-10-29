@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Premium natural products including medicinal herbs, spices, natural oils, nuts, dates, incense, perfumes, and raw honey. Fast delivery and trusted quality.">
+  <meta name="keywords" content="herbal shop, natural products, medicinal herbs, spices, raw honey, natural oils, nuts, dates, incense, perfumes">
+  <title>Herbal Shop - Nature's Best Delivered</title>
+  <!-- Precompiled Tailwind CSS (simulating output.css) -->
+  <style>
+    /* Minimal Tailwind CSS output (subset of utilities used in the app) */
+    :root {
+      --olive-green: #556B2F;
+      --beige: #F5F5DC;
+      --brown: #8B4513;
+      --soft-gold: #DAA520;
+      --dark-gray: #333333;
+    }
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+    }
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+    }
+    .container { max-width: 1280px; margin-left: auto; margin-right: auto; padding-left: 1rem; padding-right: 1rem; }
+    .bg-\[var\(--olive-green\)\] { background-color: var(--olive-green); }
+    .bg-\[var\(--beige\)\] { background-color: var(--beige); }
+    .bg-white { background-color: #fff; }
+    .text-white { color: #fff; }
+    .text-\[var\(--brown\)\] { color: var(--brown); }
+    .text-\[var\(--soft-gold\)\] { color: var(--soft-gold); }
+    .text-\[var\(--dark-gray\)\] { color: var(--dark-gray); }
+    .text-red-500 { color: #ef4444; }
+    .p-4 { padding: 1rem; }
+    .py-12 { padding-top: 3rem; padding-bottom: 3rem; }
+    .px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+    .py-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+    .mb-4 { margin-bottom: 1rem; }
+    .mb-6 { margin-bottom: 1.5rem; }
+    .mb-8 { margin-bottom: 2rem; }
+    .mt-4 { margin-top: 1rem; }
+    .mt-6 { margin-top: 1.5rem; }
+    .mt-8 { margin-top: 2rem; }
+    .flex { display: flex; }
+    .flex-col { flex-direction: column; }
+    .justify-between { justify-content: space-between; }
+    .justify-center { justify-content: center; }
+    .items-center { align-items: center; }
+    .space-x-4 > :not([hidden]) ~ :not([hidden]) { margin-left: 1rem; }
+    .space-x-6 > :not([hidden]) ~ :not([hidden]) { margin-left: 1.5rem; }
+    .grid { display: grid; }
+    .grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+    .sm\:grid-cols-2 { @media (min-width: 640px) { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    .md\:grid-cols-3 { @media (min-width: 768px) { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+    .md\:grid-cols-2 { @media (min-width: 768px) { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    .gap-6 { gap: 1.5rem; }
+    .gap-8 { gap: 2rem; }
+    .text-center { text-align: center; }
+    .text-2xl { font-size: 1.5rem; line-height: 2rem; }
+    .text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
+    .text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+    .md\:text-5xl { @media (min-width: 768px) { font-size: 3rem; line-height: 1; } }
+    .font-bold { font-weight: 700; }
+    .font-semibold { font-weight: 600; }
+    .rounded { border-radius: 0.25rem; }
+    .rounded-full { border-radius: 50%; }
+    .rounded-l { border-top-left-radius: 0.25rem; border-bottom-left-radius: 0.25rem; }
+    .rounded-r { border-top-right-radius: 0.25rem; border-bottom-right-radius: 0.25rem; }
+    .shadow { box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); }
+    .shadow-md { box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); }
+    .border { border-width: 1px; }
+    .border-b { border-bottom-width: 1px; }
+    .border-\[var\(--brown\)\] { border-color: var(--brown); }
+    .w-full { width: 100%; }
+    .w-64 { width: 16rem; }
+    .w-8 { width: 2rem; }
+    .h-8 { height: 2rem; }
+    .h-48 { height: 12rem; }
+    .h-96 { height: 24rem; }
+    .object-cover { object-fit: cover; }
+    .hover\:bg-\[var\(--brown\)\]:hover { background-color: var(--brown); }
+    .hover\:bg-\[var\(--olive-green\)\]:hover { background-color: var(--olive-green); }
+    .hover\:text-white:hover { color: #fff; }
+    .hover\:text-\[var\(--soft-gold\)\]:hover { color: var(--soft-gold); }
+    .hover\:underline:hover { text-decoration: underline; }
+    .cursor-pointer { cursor: pointer; }
+    .sticky { position: sticky; }
+    .top-0 { top: 0; }
+    .z-10 { z-index: 10; }
+    .min-h-screen { min-height: 100vh; }
+    .mt-auto { margin-top: auto; }
+    .list-disc { list-style-type: disc; }
+    .pl-5 { padding-left: 1.25rem; }
+    .bg-cover { background-size: cover; }
+    .bg-center { background-position: center; }
+    .relative { position: relative; }
+    .text-lg { font-size: 1.125rem; line-height: 1.75rem; }
+    .md\:flex-row { @media (min-width: 768px) { flex-direction: row; } }
+    .md\:w-1\/3 { @media (min-width: 768px) { width: 33.333333%; } }
+    .max-w-md { max-width: 28rem; }
+    .mx-auto { margin-left: auto; margin-right: auto; }
+    .mr-2 { margin-right: 0.5rem; }
+    .text-xl { font-size: 1.25rem; line-height: 1.75rem; }
+    .md\:text-2xl { @media (min-width: 768px) { font-size: 1.5rem; line-height: 2rem; } }
+    .border-collapse { border-collapse: collapse; }
+    .w-16 { width: 4rem; }
+    .p-1 { padding: 0.25rem; }
+    .p-2 { padding: 0.5rem; }
+    .p-6 { padding: 1.5rem; }
+    .text-sm { font-size: 0.875rem; line-height: 1.25rem; }
+    .font-['Playfair_Display'] { font-family: 'Playfair Display', serif; }
+    .font-['Roboto'] { font-family: 'Roboto', sans-serif; }
+    .user-circle {
+      width: 2rem;
+      height: 2rem;
+      background-color: var(--soft-gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    .user-circle:hover {
+      background-color: var(--brown);
+    }
+  </style>
+  <!-- React CDNs -->
+  <script crossorigin src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+  <!-- Babel for JSX -->
+  <script crossorigin src="https://unpkg.com/@babel/standalone@7.24.7/babel.min.js"></script>
+  <!-- Schema.org for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Herbal Shop",
+    "url": "https://your-herbal-shop.com",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://your-herbal-shop.com/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="root"></div>
+  <script type="text/babel">
+    // Error Boundary for Debugging
+    class ErrorBoundary extends React.Component {
+      state = { error: null };
+      static getDerivedStateFromError(error) {
+        return { error };
+      }
+      render() {
+        if (this.state.error) {
+          return <div className="text-red-500 p-4">Error: {this.state.error.message}</div>;
+        }
+        return this.props.children;
+      }
+    }
+
+    // Sample Products Data with Real Images from Unsplash
+    const products = [
+      { id: 1, name: 'Thyme', price: 5.99, image: 'https://images.unsplash.com/photo-1611100481087-2eb83c6dd97d?w=300&h=200&fit=crop', category: 'Medicinal Herbs', description: 'Versatile herb for immunity and digestion.', benefits: ['Boosts immunity', 'Aids digestion'], usage: 'Brew as tea or in cooking.', warnings: 'Consult doctor if pregnant.' },
+      { id: 2, name: 'Clove', price: 6.49, image: 'https://images.unsplash.com/photo-1608653795698-95fa5a2e5111?w=300&h=200&fit=crop', category: 'Medicinal Herbs', description: 'Antiseptic and pain-relieving herb.', benefits: ['Pain relief', 'Antiseptic'], usage: 'Use in teas or oils.', warnings: 'Avoid in large quantities.' },
+      { id: 3, name: 'Black Pepper', price: 4.99, image: 'https://images.unsplash.com/photo-1543802044-8f7b0e3d8b00?w=300&h=200&fit=crop', category: 'Spices & Seasonings', description: 'Spicy seasoning for flavor and health.', benefits: ['Improves digestion', 'Antioxidant'], usage: 'Season food.', warnings: 'Moderate use.' },
+      { id: 4, name: 'Saffron', price: 15.99, image: 'https://images.unsplash.com/photo-1542838138-70e8a5d81f8b?w=300&h=200&fit=crop', category: 'Spices & Seasonings', description: 'Premium spice for mood and flavor.', benefits: ['Mood enhancer', 'Antioxidant'], usage: 'In cooking or tea.', warnings: 'Expensive, use sparingly.' },
+      { id: 5, name: 'Lavender Oil', price: 9.99, image: 'https://images.unsplash.com/photo-1612872087726-cd5f4907a4e7?w=300&h=200&fit=crop', category: 'Natural Oils', description: 'Relaxing oil for health and beauty.', benefits: ['Calms nerves', 'Skin care'], usage: 'Apply topically or diffuse.', warnings: 'Dilute before use.' },
+      { id: 6, name: 'Almonds', price: 8.99, image: 'https://images.unsplash.com/photo-1549638444-02e7d4e8c0e5?w=300&h=200&fit=crop', category: 'Nuts & Dates', description: 'Nutritious nuts for snacking.', benefits: ['Heart health', 'Energy boost'], usage: 'Eat raw or roasted.', warnings: 'Allergy risk.' },
+      { id: 7, name: 'Medjool Dates', price: 7.49, image: 'https://images.unsplash.com/photo-1511699656952-34342bb7c2f2?w=300&h=200&fit=crop', category: 'Nuts & Dates', description: 'Sweet dates for natural energy.', benefits: ['Natural sweetener', 'Fiber rich'], usage: 'Eat as is or in recipes.', warnings: 'High sugar.' },
+      { id: 8, name: 'Frankincense Incense', price: 10.99, image: 'https://images.unsplash.com/photo-1560787806-9b7c9a8f3a5e?w=300&h=200&fit=crop', category: 'Incense & Perfumes', description: 'Aromatic incense for relaxation.', benefits: ['Stress relief', 'Aromatherapy'], usage: 'Burn in holder.', warnings: 'Ventilate room.' },
+      { id: 9, name: 'Rose Perfume', price: 12.99, image: 'https://images.unsplash.com/photo-1674106362689-9c0d0e4a4e5b?w=300&h=200&fit=crop', category: 'Incense & Perfumes', description: 'Natural floral perfume.', benefits: ['Mood uplift', 'Natural scent'], usage: 'Spray on skin.', warnings: 'Test for allergies.' },
+      { id: 10, name: 'Raw Honey', price: 12.99, image: 'https://images.unsplash.com/photo-1546961329-78bef0414d7c?w=300&h=200&fit=crop', category: 'Raw Honey', description: 'Pure honey for health.', benefits: ['Antibacterial', 'Sweetener'], usage: 'In tea or food.', warnings: 'Not for infants.' }
+    ];
+
+    // Categories
+    const categories = ['Medicinal Herbs', 'Spices & Seasonings', 'Natural Oils', 'Nuts & Dates', 'Incense & Perfumes', 'Raw Honey'];
+
+    // Header Component
+    function Header({ setPage, cartCount, handleUserClick }) {
+      return (
+        <header className="bg-[var(--olive-green)] text-white p-4 sticky top-0 z-10">
+          <nav className="container flex justify-between items-center">
+            <a onClick={() => setPage('home')} className="text-2xl font-bold font-['Playfair_Display'] cursor-pointer">Herbal Shop</a>
+            <ul className="flex space-x-4 md:space-x-6">
+              <li><a onClick={() => setPage('home')} className="hover:text-[var(--soft-gold)] cursor-pointer">Home</a></li>
+              <li><a onClick={() => setPage('products')} className="hover:text-[var(--soft-gold)] cursor-pointer">Products</a></li>
+              <li><a onClick={() => setPage('contact')} className="hover:text-[var(--soft-gold)] cursor-pointer">Contact</a></li>
+              <li><a onClick={() => setPage('cart')} className="hover:text-[var(--soft-gold)] cursor-pointer relative">Cart ({cartCount})</a></li>
+              <li><a onClick={() => setPage('admin')} className="hover:text-[var(--soft-gold)] cursor-pointer">Admin</a></li>
+              <li><div onClick={handleUserClick} className="user-circle">👤</div></li>
+            </ul>
+          </nav>
+        </header>
+      );
+    }
+
+    // Hero Component
+    function Hero({ setPage }) {
+      return (
+        <section className="relative bg-[var(--beige)] text-center py-12 bg-cover bg-center" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1556909114-f6e7ad7d3133?w=1920&h=600&fit=crop)' }}>
+          <div className="container">
+            <h1 className="text-4xl md:text-5xl font-bold font-['Playfair_Display'] text-[var(--brown)]">Nature's Secrets, Delivered to Your Home</h1>
+            <p className="text-xl md:text-2xl text-[var(--dark-gray)] mt-4">Premium herbs, spices, oils, and traditional blends crafted with care. Fast delivery and trusted quality.</p>
+            <div className="mt-6 flex justify-center space-x-4">
+              <button onClick={() => setPage('products')} className="bg-[var(--olive-green)] text-white px-6 py-2 rounded hover:bg-[var(--brown)]">Shop Now</button>
+              <button onClick={() => setPage('products')} className="bg-[var(--brown)] text-white px-6 py-2 rounded hover:bg-[var(--olive-green)]">Explore Products</button>
+              <button onClick={() => setPage('contact')} className="bg-[var(--beige)] text-[var(--brown)] border border-[var(--brown)] px-6 py-2 rounded hover:bg-[var(--brown)] hover:text-white">Contact Us</button>
+            </div>
+          </div>
+        </section>
+      );
+    }
+
+    // Featured Products Component
+    function FeaturedProducts({ addToCart }) {
+      const featured = products.slice(0, 6);
+      return (
+        <section className="container py-12">
+          <h2 className="text-3xl font-bold font-['Playfair_Display'] text-[var(--brown)] text-center mb-8">Featured Products</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            {featured.map(product => (
+              <div key={product.id} className="bg-white shadow-md rounded-lg overflow-hidden">
+                <img src={product.image} alt={product.name} className="w-full h-48 object-cover" loading="lazy" />
+                <div className="p-4">
+                  <h3 className="text-lg font-semibold text-[var(--brown)]">{product.name}</h3>
+                  <p className="text-[var(--soft-gold)]">${product.price.toFixed(2)}</p>
+                  <button onClick={() => addToCart(product)} className="mt-2 bg-[var(--olive-green)] text-white px-4 py-2 rounded hover:bg-[var(--brown)]">Add to Cart</button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+      );
+    }
+
+    // Benefits Component
+    function Benefits() {
+      return (
+        <section className="bg-[var(--beige)] py-12">
+          <div className="container grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+            <div className="bg-white p-6 shadow rounded">
+              <h3 className="text-xl font-semibold text-[var(--brown)]">100% Natural</h3>
+              <p>Pure, organic products sourced sustainably.</p>
+            </div>
+            <div className="bg-white p-6 shadow rounded">
+              <h3 className="text-xl font-semibold text-[var(--brown)]">Fast Delivery</h3>
+              <p>Fast and reliable shipping to your door.</p>
+            </div>
+            <div className="bg-white p-6 shadow rounded">
+              <h3 className="text-xl font-semibold text-[var(--brown)]">Secure Payments</h3>
+              <p>Trusted payment gateways for safe transactions.</p>
+            </div>
+          </div>
+        </section>
+      );
+    }
+
+    // Testimonials Component
+    function Testimonials() {
+      return (
+        <section className="container py-12 text-center">
+          <h2 className="text-3xl font-bold font-['Playfair_Display'] text-[var(--brown)] mb-8">What Our Customers Say</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-white p-6 shadow rounded">
+              <p>"Amazing quality herbs! Fast delivery."</p>
+              <p className="mt-4 font-bold">- John D.</p>
+              <div className="text-[var(--soft-gold)]">★★★★★</div>
+            </div>
+            <div className="bg-white p-6 shadow rounded">
+              <p>"Love the natural oils for my skin."</p>
+              <p className="mt-4 font-bold">- Sarah K.</p>
+              <div className="text-[var(--soft-gold)]">★★★★☆</div>
+            </div>
+            <div className="bg-white p-6 shadow rounded">
+              <p>"Best raw honey I've tried."</p>
+              <p className="mt-4 font-bold">- Mike L.</p>
+              <div className="text-[var(--soft-gold)]">★★★★★</div>
+            </div>
+          </div>
+        </section>
+      );
+    }
+
+    // Newsletter Component
+    function Newsletter() {
+      const handleSubscribe = (e) => {
+        e.preventDefault();
+        console.log('Subscribed:', e.target.email.value);
+        alert('Thank you for subscribing!');
+      };
+      return (
+        <section className="container py-12 text-center">
+          <h2 className="text-3xl font-bold font-['Playfair_Display'] text-[var(--brown)] mb-4">Join Our Newsletter</h2>
+          <p className="text-[var(--dark-gray)] mb-6">Stay updated with our latest products and health tips!</p>
+          <form onSubmit={handleSubscribe} className="flex justify-center">
+            <input name="email" type="email" placeholder="Enter your email" className="border border-[var(--brown)] p-2 rounded-l w-64" required />
+            <button type="submit" className="bg-[var(--olive-green)] text-white px-4 py-2 rounded-r hover:bg-[var(--brown)]">Subscribe</button>
+          </form>
+        </section>
+      );
+    }
+
+    // Products Page Component
+    function ProductsPage({ addToCart, setSelectedProduct, setPage }) {
+      const [search, setSearch] = React.useState('');
+      const [category, setCategory] = React.useState('');
+      const filteredProducts = products.filter(p => 
+        p.name.toLowerCase().includes(search.toLowerCase()) &&
+        (category ? p.category === category : true)
+      );
+
+      return (
+        <section className="container py-12">
+          <h2 className="text-3xl font-bold font-['Playfair_Display'] text-[var(--brown)] text-center mb-8">Our Products</h2>
+          <div className="flex flex-col md:flex-row justify-between mb-6">
+            <input type="text" placeholder="Search products..." value={search} onChange={(e) => setSearch(e.target.value)} className="border border-[var(--brown)] p-2 rounded w-full md:w-1/3 mb-4 md:mb-0" />
+            <select value={category} onChange={(e) => setCategory(e.target.value)} className="border border-[var(--brown)] p-2 rounded w-full md:w-1/3">
+              <option value="">All Categories</option>
+              {categories.map(cat => <option key={cat} value={cat}>{cat}</option>)}
+            </select>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            {filteredProducts.length === 0 ? (
+              <p className="text-center col-span-full">No products found.</p>
+            ) : (
+              filteredProducts.map(product => (
+                <div key={product.id} className="bg-white shadow-md rounded-lg overflow-hidden">
+                  <img src={product.image} alt={product.name} className="w-full h-48 object-cover" loading="lazy" />
+                  <div className="p-4">
+                    <h3 className="text-lg font-semibold text-[var(--brown)]">{product.name}</h3>
+                    <p className="text-[var(--soft-gold)]">${product.price.toFixed(2)}</p>
+                    <button onClick={() => { setSelectedProduct(product); setPage('productDetails'); }} className="mt-2 bg-[var(--brown)] text-white px-4 py-2 rounded hover:bg-[var(--olive-green)] mr-2">View Details</button>
+                    <button onClick={() => addToCart(product)} className="mt-2 bg-[var(--olive-green)] text-white px-4 py-2 rounded hover:bg-[var(--brown)]">Add to Cart</button>
+                  </div>
+                </div>
+              ))
+            )}
+          </div>
+        </section>
+      );
+    }
+
+    // Product Details Component
+    function ProductDetails({ product, addToCart, setPage }) {
+      if (!product) return <div className="container py-12 text-center">No product selected.</div>;
+      return (
+        <section className="container py-12">
+          <button onClick={() => setPage('products')} className="mb-4 text-[var(--brown)] hover:underline">&lt; Back to Products</button>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <img src={product.image} alt={product.name} className="w-full h-96 object-cover rounded" loading="lazy" />
+            <div>
+              <h2 className="text-3xl font-bold font-['Playfair_Display'] text-[var(--brown)] mb-4">{product.name}</h2>
+              <p className="text-[var(--soft-gold)] text-2xl mb-4">${product.price.toFixed(2)}</p>
+              <p className="mb-4">{product.description}</p>
+              <h3 className="font-semibold mb-2">Benefits:</h3>
+              <ul className="list-disc pl-5 mb-4">
+                {product.benefits.map(b => <li key={b}>{b}</li>)}
+              </ul>
+              <h3 className="font-semibold mb-2">Usage:</h3>
+              <p className="mb-4">{product.usage}</p>
+              <h3 className="font-semibold mb-2">Warnings:</h3>
+              <p className="mb-4">{product.warnings}</p>
+              <button onClick={() => addToCart(product)} className="bg-[var(--olive-green)] text-white px-6 py-2 rounded hover:bg-[var(--brown)]">Add to Cart</button>
+              <div className="mt-8">
+                <h3 className="font-semibold mb-2">Customer Reviews</h3>
+                <div className="bg-white p-4 shadow rounded mb-4">
+                  <p>"Great product!" - Customer A</p>
+                  <div className="text-[var(--soft-gold)]">★★★★★</div>
+                </div>
+                <form className="flex flex-col">
+                  <textarea placeholder="Write your review..." className="border p-2 mb-2 rounded" rows="4"></textarea>
+                  <button type="submit" className="bg-[var(--brown)] text-white px-4 py-2 rounded hover:bg-[var(--olive-green)]">Submit Review</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+      );
+    }
+
+    // Cart Page Component
+    function CartPage({ cart, removeFromCart, updateQuantity, setPage }) {
+      const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+      const loyaltyPoints = Math.floor(total / 10); // 1 point per $10
+
+      return (
+        <section className="container py-12">
+          <h2 className="text-3xl font-bold font-['Playfair_Display'] text-[var(--brown)] text-center mb-8">Your Cart</h2>
+          {cart.length === 0 ? (
+            <p className="text-center">Your cart is empty.</p>
+          ) : (
+            <div>
+              <table className="w-full border-collapse">
+                <thead>
+                  <tr className="bg-[var(--beige)]">
+                    <th className="p-2">Product</th>
+                    <th className="p-2">Price</th>
+                    <th className="p-2">Quantity</th>
+                    <th className="p-2">Subtotal</th>
+                    <th className="p-2">Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {cart.map(item => (
+                    <tr key={item.id} className="border-b">
+                      <td className="p-2">{item.name}</td>
+                      <td className="p-2">${item.price.toFixed(2)}</td>
+                      <td className="p-2">
+                        <input type="number" value={item.quantity} min="1" onChange={(e) => updateQuantity(item.id, parseInt(e.target.value))} className="w-16 border p-1 rounded" />
+                      </td>
+                      <td className="p-2">${(item.price * item.quantity).toFixed(2)}</td>
+                      <td className="p-2">
+                        <button onClick={() => removeFromCart(item.id)} className="text-red-500 hover:underline">Remove</button>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+              <div className="mt-6 text-right">
+                <p className="text-xl">Total: ${total.toFixed(2)}</p>
+                <p className="text-sm">Earn {loyaltyPoints} loyalty points!</p>
+                <button onClick={() => setPage('checkout')} className="mt-4 bg-[var(--olive-green)] text-white px-6 py-2 rounded hover:bg-[var(--brown)]">Proceed to Checkout</button>
+              </div>
+            </div>
+          )}
+        </section>
+      );
+    }
+
+    // Checkout Page Component
+    function CheckoutPage({ cart, setPage }) {
+      const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+      const handleCheckout = (e) => {
+        e.preventDefault();
+        console.log('Checkout data:', Object.fromEntries(new FormData(e.target)));
+        alert('Order placed successfully! (Simulation)');
+        setPage('home');
+      };
+
+      return (
+        <section className="container py-12">
+          <h2 className="text-3xl font-bold font-['Playfair_Display'] text-[var(--brown)] text-center mb-8">Checkout</h2>
+          <form onSubmit={handleCheckout} className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 className="font-semibold mb-4">Billing Information</h3>
+              <input name="name" type="text" placeholder="Name" className="border p-2 w-full mb-2 rounded" required />
+              <input name="email" type="email" placeholder="Email" className="border p-2 w-full mb-2 rounded" required />
+              <input name="address" type="text" placeholder="Address" className="border p-2 w-full mb-2 rounded" required />
+              <input name="city" type="text" placeholder="City" className="border p-2 w-full mb-2 rounded" required />
+              <input name="zip" type="text" placeholder="Zip Code" className="border p-2 w-full mb-2 rounded" required />
+            </div>
+            <div>
+              <h3 className="font-semibold mb-4">Order Summary</h3>
+              {cart.map(item => (
+                <div key={item.id} className="flex justify-between mb-2">
+                  <p>{item.name} x {item.quantity}</p>
+                  <p>${(item.price * item.quantity).toFixed(2)}</p>
+                </div>
+              ))}
+              <div className="flex justify-between font-bold mt-4">
+                <p>Total</p>
+                <p>${total.toFixed(2)}</p>
+              </div>
+              <h3 className="font-semibold mt-6 mb-4">Payment (Simulation)</h3>
+              <p>Integrate PayPal, Fawry, or Paymob here. For demo, click submit.</p>
+              <button type="submit" className="mt-4 bg-[var(--olive-green)] text-white px-6 py-2 rounded hover:bg-[var(--brown)] w-full">Place Order</button>
+            </div>
+          </form>
+        </section>
+      );
+    }
+
+    // Contact Us Page
+    function ContactPage() {
+      const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log('Contact form submitted:', Object.fromEntries(new FormData(e.target)));
+        alert('Message sent! (Simulation)');
+      };
+      return (
+        <section className="container py-12">
+          <h2 className="text-3xl font-bold font-['Playfair_Display'] text-[var(--brown)] text-center mb-8">Contact Us</h2>
+          <form onSubmit={handleSubmit} className="max-w-md mx-auto">
+            <input name="name" type="text" placeholder="Name" className="border p-2 w-full mb-4 rounded" required />
+            <input name="email" type="email" placeholder="Email" className="border p-2 w-full mb-4 rounded" required />
+            <textarea name="message" placeholder="Message" className="border p-2 w-full mb-4 rounded" rows="6" required></textarea>
+            <button type="submit" className="bg-[var(--olive-green)] text-white px-6 py-2 rounded hover:bg-[var(--brown)] w-full">Send Message</button>
+          </form>
+          <div className="mt-8 text-center">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.9147703055!2d-74.11976314309273!3d40.69740344223377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY%2C+USA!5e0!3m2!1sen!2sbd!4v1547528325671" width="600" height="450" style={{border:0}} allowfullscreen="" loading="lazy"></iframe>
+          </div>
+        </section>
+      );
+    }
+
+    // Admin Dashboard (Simple, with fake login)
+    function AdminDashboard() {
+      const [loggedIn, setLoggedIn] = React.useState(false);
+      const handleLogin = (e) => {
+        e.preventDefault();
+        if (e.target.username.value === 'admin' && e.target.password.value === 'password') {
+          setLoggedIn(true);
+        } else {
+          alert('Invalid credentials');
+        }
+      };
+
+      if (!loggedIn) {
+        return (
+          <section className="container py-12">
+            <h2 className="text-3xl font-bold font-['Playfair_Display'] text-[var(--brown)] text-center mb-8">Admin Login</h2>
+            <form onSubmit={handleLogin} className="max-w-md mx-auto">
+              <input name="username" type="text" placeholder="Username" className="border p-2 w-full mb-4 rounded" required />
+              <input name="password" type="password" placeholder="Password" className="border p-2 w-full mb-4 rounded" required />
+              <button type="submit" className="bg-[var(--olive-green)] text-white px-6 py-2 rounded hover:bg-[var(--brown)] w-full">Login</button>
+            </form>
+          </section>
+        );
+      }
+
+      return (
+        <section className="container py-12">
+          <h2 className="text-3xl font-bold font-['Playfair_Display'] text-[var(--brown)] text-center mb-8">Admin Dashboard</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="bg-white p-6 shadow rounded">
+              <h3 className="font-semibold mb-4">Manage Products</h3>
+              <p>Add/Edit products here (simulation).</p>
+            </div>
+            <div className="bg-white p-6 shadow rounded">
+              <h3 className="font-semibold mb-4">Orders</h3>
+              <p>View orders (simulation).</p>
+            </div>
+            <div className="bg-white p-6 shadow rounded">
+              <h3 className="font-semibold mb-4">Discounts</h3>
+              <p>Set discounts (simulation).</p>
+            </div>
+            <div className="bg-white p-6 shadow rounded">
+              <h3 className="font-semibold mb-4">Customer Messages</h3>
+              <p>View messages (simulation).</p>
+            </div>
+          </div>
+        </section>
+      );
+    }
+
+    // Footer Component
+    function Footer() {
+      return (
+        <footer className="bg-[var(--olive-green)] text-white py-8 mt-auto">
+          <div className="container text-center">
+            <p>&copy; 2025 Herbal Shop. All rights reserved.</p>
+            <div className="mt-4">
+              <a href="#contact" className="mx-2 hover:text-[var(--soft-gold)]">Contact</a>
+              <a href="#privacy" className="mx-2 hover:text-[var(--soft-gold)]">Privacy Policy</a>
+            </div>
+          </div>
+        </footer>
+      );
+    }
+
+    // Main App Component
+    function App() {
+      const [page, setPage] = React.useState('home');
+      const [cart, setCart] = React.useState([]);
+      const [selectedProduct, setSelectedProduct] = React.useState(null);
+
+      const handleUserClick = () => {
+        alert('User Profile / Login (Coming Soon)');
+      };
+
+      const addToCart = (product) => {
+        const existing = cart.find(item => item.id === product.id);
+        if (existing) {
+          updateQuantity(product.id, existing.quantity + 1);
+        } else {
+          setCart([...cart, { ...product, quantity: 1 }]);
+        }
+      };
+
+      const removeFromCart = (id) => {
+        setCart(cart.filter(item => item.id !== id));
+      };
+
+      const updateQuantity = (id, qty) => {
+        if (qty < 1 || isNaN(qty)) return;
+        setCart(cart.map(item => item.id === id ? { ...item, quantity: qty } : item));
+      };
+
+      const renderPage = () => {
+        switch (page) {
+          case 'home':
+            return (
+              <>
+                <Hero setPage={setPage} />
+                <FeaturedProducts addToCart={addToCart} />
+                <Benefits />
+                <Testimonials />
+                <Newsletter />
+              </>
+            );
+          case 'products':
+            return <ProductsPage addToCart={addToCart} setSelectedProduct={setSelectedProduct} setPage={setPage} />;
+          case 'productDetails':
+            return <ProductDetails product={selectedProduct} addToCart={addToCart} setPage={setPage} />;
+          case 'cart':
+            return <CartPage cart={cart} removeFromCart={removeFromCart} updateQuantity={updateQuantity} setPage={setPage} />;
+          case 'checkout':
+            return <CheckoutPage cart={cart} setPage={setPage} />;
+          case 'contact':
+            return <ContactPage />;
+          case 'admin':
+            return <AdminDashboard />;
+          default:
+            return <Hero setPage={setPage} />;
+        }
+      };
+
+      return (
+        <ErrorBoundary>
+          <div className="flex flex-col min-h-screen">
+            <Header setPage={setPage} cartCount={cart.reduce((sum, item) => sum + item.quantity, 0)} handleUserClick={handleUserClick} />
+            {renderPage()}
+            <Footer />
+          </div>
+        </ErrorBoundary>
+      );
+    }
+
+    // Render App
+    try {
+      ReactDOM.render(<App />, document.getElementById('root'));
+    } catch (error) {
+      console.error('Render error:', error);
+      document.getElementById('root').innerHTML = '<div class="text-red-500 p-4">Failed to render application. Check console for details.</div>';
+    }
+  </script>
+</body>
+</html>
